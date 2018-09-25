@@ -1,9 +1,9 @@
 <nav>
     <ul>
-      <li *ngFor="let product of config | mapToIterable">
-          <span class="icon"></span>
-          <a [routerLink]="['/', product.value.id]">{{ product.value.linkText }}</a>
-      </li>
+        <li *ngFor="let product of config | mapToIterable">
+            <span class="icon"></span>
+            <a [routerLink]="['/', product.value.id]">{{ product.value.linkText }}</a>
+        </li>
     </ul>
 </nav>
 

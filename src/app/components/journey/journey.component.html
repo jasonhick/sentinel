@@ -1,7 +1,17 @@
-<h1>
-    {{ currentJourney.title }}
-</h1>
+<h1>{{ currentJourney.title }}</h1>
 
+<form>
+    <mat-vertical-stepper
+        [linear]="true">
+        <mat-step
+            *ngFor="let page of currentJourney.pages; let i = index; let c = count">
+            <ng-template matStepLabel>{{ page | uppercase }}</ng-template>
+        </mat-step>
+    </mat-vertical-stepper>
+
+</form>
+
+<!--
 <form>
     <fieldset *ngFor="let page of currentJourney.pages; let i = index; let c = count">
         <legend>{{ page }} Step {{ i + 1 }} of {{ c }}</legend>
@@ -9,4 +19,4 @@
             <br>{{ question.label }}
         </div>
     </fieldset>
-</form>
+</form> -->
