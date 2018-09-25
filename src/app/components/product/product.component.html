@@ -1,0 +1,9 @@
+<h1>{{ title }}</h1>
+<h2>{{ subtitle }}</h2>
+
+<ul>
+  <li *ngFor="let journey of journeys | mapToIterable">
+      <span class="icon"></span>
+      <a [routerLink]="['/', product, journey.value.id]">{{ journey.value.title }}</a>
+  </li>
+</ul>

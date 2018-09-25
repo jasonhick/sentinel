@@ -1,0 +1,12 @@
+<h1>
+    {{ currentJourney.title }}
+</h1>
+
+<form>
+    <fieldset *ngFor="let page of currentJourney.pages; let i = index; let c = count">
+        <legend>{{ page }} Step {{ i + 1 }} of {{ c }}</legend>
+        <div *ngFor="let question of currentJourney.questions[page]">
+            <br>{{ question.label }}
+        </div>
+    </fieldset>
+</form>
