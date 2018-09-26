@@ -4,6 +4,8 @@ import { ActivatedRoute } from '@angular/router';
 import { CONFIG } from '../../../config/sentinel.config';
 import { Questions } from '../../../config/questions/questions';
 
+import { SharedService } from '../../../shared/services/shared.service';
+
 @Component({
   selector: 'app-journey',
   templateUrl: './journey.component.html',
@@ -14,7 +16,7 @@ export class JourneyComponent implements OnInit {
   currentJourney: any;
   questions: Map<String, Object>;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private sharedService: SharedService) {}
 
   ngOnInit() {
     this.config = CONFIG;

@@ -4,43 +4,28 @@ export const AAD = {
   title: 'Add a driver',
   pages: [
     'eligibility',
-    'your-details',
-    'add-driver',
-    'review-and-confirm',
-    'important-information'
-    // 'requested', // old success page
-    // 'verification',
-    // 'quotation',
-    // 'payment',
-    // 'success',
-    // 'declined'
+    'your-details'
+    // 'add-driver',
+    // 'review-and-confirm',
+    // 'important-information'
   ],
   questions: {
-    eligibility: [
-      'renewalDate',
-      'otherChanges',
-      'automaticRenewal',
-      'paymentType'
-    ],
+    eligibility: ['renewalDate', 'otherChanges', 'automaticRenewal', 'paymentType'],
     'your-details': [
       'title',
       'firstName',
       'lastName',
       'postcode',
-      'dob',
-      'isPolicyHolder',
-      'applicantRelationship',
-      'applicantFullName',
-      'email',
-      'phone',
-      'policyNumber'
+      'dob'
+      // 'isPolicyHolder',
+      // 'applicantRelationship',
+      // 'applicantFullName',
+      // 'email',
+      // 'phone',
+      // 'policyNumber'
     ],
     'add-driver': ['title', 'firstName', 'lastName'],
     'review-and-confirm': ['agree'],
-    'important-information': [
-      'renewalAccepted',
-      'policyAccurate',
-      'useCurrentPaymentMethod'
-    ]
+    'important-information': ['renewalAccepted', 'policyAccurate', 'useCurrentPaymentMethod']
   }
 };

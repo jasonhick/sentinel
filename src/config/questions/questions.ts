@@ -4,6 +4,42 @@ import validators from '../validators/validators';
 // This object is Immutable. It should not be changed in the code.
 export const Questions: Map<String, Object> = new Map<String, Object>([
   [
+    'renewalDate',
+    {
+      type: 'radio',
+      id: 'renewalDate',
+      name: 'renewalDate',
+      label: 'Renewal date'
+    }
+  ],
+  [
+    'otherChanges',
+    {
+      type: 'radio',
+      id: 'otherChanges',
+      name: 'otherChanges',
+      label: 'Other changes'
+    }
+  ],
+  [
+    'automaticRenewal',
+    {
+      type: 'radio',
+      id: 'automaticRenewal',
+      name: 'automaticRenewal',
+      label: 'Automatic renewal'
+    }
+  ],
+  [
+    'paymentType',
+    {
+      type: 'radio',
+      id: 'paymentType',
+      name: 'paymentType',
+      label: 'Payment type'
+    }
+  ],
+  [
     'title',
     {
       type: 'radio',
@@ -31,11 +67,7 @@ export const Questions: Map<String, Object> = new Map<String, Object>([
       id: 'firstName',
       name: 'firstName',
       label: 'First name',
-      validators: [
-        validators.required,
-        validators.minLength,
-        validators.maxLength
-      ],
+      validators: [validators.required, validators.minLength, validators.maxLength],
       minLengthValue: 2,
       maxLengthValue: 20
     }
@@ -47,11 +79,7 @@ export const Questions: Map<String, Object> = new Map<String, Object>([
       id: 'lastName',
       name: 'lastName',
       label: 'Last name',
-      validators: [
-        validators.required,
-        validators.minLength,
-        validators.maxLength
-      ],
+      validators: [validators.required, validators.minLength, validators.maxLength],
       minLengthValue: 2,
       maxLengthValue: 20
     }
@@ -68,9 +96,7 @@ export const Questions: Map<String, Object> = new Map<String, Object>([
       id: 'postcode',
       name: 'postcode',
       label: 'Postcode',
-      validators: [
-        validators.required
-      ]
+      validators: [validators.required]
     }
-  ],
+  ]
 ]);

@@ -5,7 +5,12 @@
         [linear]="true">
         <mat-step
             *ngFor="let page of currentJourney.pages; let i = index; let c = count">
+
             <ng-template matStepLabel>{{ page | uppercase }}</ng-template>
+
+            <div *ngFor="let question of currentJourney.questions[page]">
+                <br>{{ questions.get(question).label }}
+            </div>
         </mat-step>
     </mat-vertical-stepper>
 
